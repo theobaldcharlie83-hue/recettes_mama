@@ -11,16 +11,17 @@ export default defineConfig({
       includeAssets: ['vite.svg', 'pwa-192x192.png', 'pwa-512x512.png', 'logo_transparent.png', 'data/recipes.json'],
       manifest: {
         name: 'Recettes de Mama',
-        short_name: 'Recettes',
-        description: 'Livre de recettes de la famille',
-        theme_color: '#ffffff',
-        background_color: '#ffffff',
+        short_name: 'Recettes Mama',
+        description: 'Le livre de recettes de la famille Mattio',
+        theme_color: '#6B1E3C',
+        background_color: '#F5F0E8',
         display: 'standalone',
         icons: [
           {
             src: 'pwa-192x192.png',
             sizes: '192x192',
-            type: 'image/png'
+            type: 'image/png',
+            purpose: 'any'
           },
           {
             src: 'pwa-512x512.png',
