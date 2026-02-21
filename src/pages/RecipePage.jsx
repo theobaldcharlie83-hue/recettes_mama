@@ -1,8 +1,18 @@
 import React, { useContext, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
-import { Utensils, BookOpen, Heart, ArrowLeft, Loader2 } from 'lucide-react';
+import { Utensils, BookOpen, Heart, ArrowLeft, Loader2, Carrot, Drumstick, Cookie, Coffee, Droplet, Martini, ChefHat } from 'lucide-react';
 import { motion } from 'framer-motion';
+
+const getCategoryIcon = (chapter, size = 120) => {
+    if (!chapter) return <ChefHat size={size} strokeWidth={1.5} />;
+    if (chapter.includes('Sauces')) return <Droplet size={size} strokeWidth={1.5} />;
+    if (chapter.includes('Entrées')) return <Martini size={size} strokeWidth={1.5} />;
+    if (chapter.includes('Légumes')) return <Carrot size={size} strokeWidth={1.5} />;
+    if (chapter.includes('Plats')) return <Drumstick size={size} strokeWidth={1.5} />;
+    if (chapter.includes('Desserts')) return <Cookie size={size} strokeWidth={1.5} />;
+    return <ChefHat size={size} strokeWidth={1.5} />;
+};
 
 export default function RecipePage() {
     const { id } = useParams();
@@ -57,10 +67,16 @@ export default function RecipePage() {
         >
             <div className="relative p-6 text-center pt-24 pb-8 transition-colors flex flex-col items-center justify-end min-h-[220px]">
                 {/* Image Background */}
-                {recipe.image && (
+                {recipe.image && recipe.image !== '/default_recipe.png' ? (
                     <div className="absolute inset-0 z-0">
                         <img src={recipe.image} alt={recipe.title} className="w-full h-full object-cover opacity-90 dark:opacity-70" />
                         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent dark:from-gray-900 dark:via-gray-900/80"></div>
+                    </div>
+                ) : (
+                    <div className="absolute inset-0 z-0 bg-gradient-to-b from-orange-50/50 to-white dark:from-gray-800/40 dark:to-gray-900 flex items-center justify-center opacity-70">
+                        <div className="text-orange-200 dark:text-gray-800 mb-8 transform hover:scale-105 transition-transform duration-700">
+                            {getCategoryIcon(recipe.chapter, 160)}
+                        </div>
                     </div>
                 )}
 

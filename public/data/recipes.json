@@ -374,7 +374,7 @@
   {
     "title": "Porc au caramel",
     "chapter": "Plats de Résistance",
-    "ingredients": "Oignon (x4), viande (1kg) sauté de porc, 6 morceaux de sucre (30g), sauce nloc mam + sauce soja 4 à 5 CS.",
+    "ingredients": "Oignon (x4), viande (1kg) sauté de porc, 6 morceaux de sucre (30g), sauce nuoc mam + sauce soja 4 à 5 CS.",
     "instructions": [
       "Hacher l'oignon (x4), mettre l'oignon + viande (1kg) sauté de porc dans un faitout pendant 15' en remuant.",
       "Au bout de 15', rajouter 6 morceaux de sucre (30g) et remuer. Laisser revenir 5'.",
@@ -908,5 +908,75 @@
     "image": "/default_recipe.png",
     "prepTime": "15",
     "difficulty": "Facile"
+  },
+  {
+    "id": 48,
+    "title": "Porc sauté aux nouilles",
+    "chapter": "Plats de Résistance",
+    "ingredients": "À compléter...",
+    "instructions": [
+      "À compléter..."
+    ],
+    "tags": [
+      "À compléter"
+    ],
+    "prepTime": "?",
+    "difficulty": "?"
+  },
+  {
+    "id": 49,
+    "title": "Rouleaux de printemps",
+    "chapter": "Entrées et Apéros",
+    "ingredients": "À compléter...",
+    "instructions": [
+      "À compléter..."
+    ],
+    "tags": [
+      "À compléter"
+    ],
+    "prepTime": "?",
+    "difficulty": "?"
+  },
+  {
+    "id": 50,
+    "title": "Tomates farcies au boeuf",
+    "chapter": "Plats de Résistance",
+    "ingredients": "À compléter...",
+    "instructions": [
+      "À compléter..."
+    ],
+    "tags": [
+      "À compléter"
+    ],
+    "prepTime": "?",
+    "difficulty": "?"
+  },
+  {
+    "id": 51,
+    "title": "Samoussa au thon",
+    "chapter": "Entrées et Apéros",
+    "ingredients": "À compléter...",
+    "instructions": [
+      "À compléter..."
+    ],
+    "tags": [
+      "À compléter"
+    ],
+    "prepTime": "?",
+    "difficulty": "?"
+  },
+  {
+    "id": 52,
+    "title": "Colombo au porc",
+    "chapter": "Plats de Résistance",
+    "ingredients": "À compléter...",
+    "instructions": [
+      "À compléter..."
+    ],
+    "tags": [
+      "À compléter"
+    ],
+    "prepTime": "?",
+    "difficulty": "?"
   }
 ]
