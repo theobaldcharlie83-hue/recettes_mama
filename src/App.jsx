@@ -32,7 +32,7 @@ export default function App() {
 
     // Splash Timer
     useEffect(() => {
-        const timer = setTimeout(() => setShowSplash(false), 2000);
+        const timer = setTimeout(() => setShowSplash(false), 6500);
         return () => clearTimeout(timer);
     }, []);
 
@@ -48,8 +48,8 @@ export default function App() {
                     <Route path="trash" element={<TrashPage />} />
                 </Route>
             </Routes>
-            <div className="fixed bottom-1 right-2 text-[10px] text-gray-400/80 dark:text-gray-500/80 z-[100] pointer-events-none font-mono font-bold drop-shadow-sm">
-                V 1.2.
+            <div className="fixed bottom-1 right-2 text-[7px] text-gray-400/60 dark:text-gray-500/60 z-[100] pointer-events-none font-mono drop-shadow-sm">
+                v1.2
             </div>
         </>
     );
