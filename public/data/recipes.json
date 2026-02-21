@@ -10,7 +10,11 @@
     "tags": [
       "Thermomix",
       "Base"
-    ]
+    ],
+    "id": 1,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Sauce Caesar",
@@ -24,7 +28,11 @@
     "tags": [
       "Sauce",
       "Thermomix"
-    ]
+    ],
+    "id": 2,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Sauce à la Grenade",
@@ -35,7 +43,11 @@
     ],
     "tags": [
       "Sauce"
-    ]
+    ],
+    "id": 3,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Sauce à Tartiner (Dip Apéro)",
@@ -46,7 +58,11 @@
     ],
     "tags": [
       "Apéro"
-    ]
+    ],
+    "id": 4,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Accras de Morue",
@@ -62,7 +78,11 @@
     "notes": "Note: La pâte peut se congeler.",
     "tags": [
       "Friture"
-    ]
+    ],
+    "id": 5,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Velouté aux Poivrons et au Boursin",
@@ -77,7 +97,11 @@
     "tags": [
       "Soupe",
       "Cocotte Minute"
-    ]
+    ],
+    "id": 6,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Soupe de Légumes",
@@ -90,7 +114,11 @@
     "tags": [
       "Soupe",
       "Thermomix"
-    ]
+    ],
+    "id": 7,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Tarte Fine Courgettes / Chèvre",
@@ -106,7 +134,11 @@
     ],
     "tags": [
       "Tarte"
-    ]
+    ],
+    "id": 8,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Quiche Tomate / Thon",
@@ -121,7 +153,11 @@
     "notes": "(Note: rature corrigée sur l'ordre des ingrédients)",
     "tags": [
       "Quiche"
-    ]
+    ],
+    "id": 9,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Clafoutis Salé au Chèvre",
@@ -136,7 +172,11 @@
     ],
     "tags": [
       "Clafoutis"
-    ]
+    ],
+    "id": 10,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Clafoutis de Tomates au Jambon",
@@ -150,7 +190,11 @@
     ],
     "tags": [
       "Clafoutis"
-    ]
+    ],
+    "id": 11,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Soufflé de Butternut",
@@ -164,7 +208,11 @@
     ],
     "tags": [
       "Soufflé"
-    ]
+    ],
+    "id": 12,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Gratin de Courgettes",
@@ -178,7 +226,11 @@
     ],
     "tags": [
       "Gratin"
-    ]
+    ],
+    "id": 13,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Ratatouille",
@@ -193,7 +245,11 @@
     "tags": [
       "Légumes",
       "Cocotte"
-    ]
+    ],
+    "id": 14,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Tian Provençal",
@@ -207,7 +263,11 @@
     ],
     "tags": [
       "Légumes"
-    ]
+    ],
+    "id": 15,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Courgettes / Feta rôtie",
@@ -223,7 +283,11 @@
     ],
     "tags": [
       "Légumes"
-    ]
+    ],
+    "id": 16,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Jardinière",
@@ -238,7 +302,11 @@
     ],
     "tags": [
       "Cocotte"
-    ]
+    ],
+    "id": 17,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Gratin de Butternut",
@@ -257,7 +325,11 @@
     "tags": [
       "Thermomix",
       "Gratin"
-    ]
+    ],
+    "id": 18,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Lasagnes épinard / Ricotta",
@@ -275,7 +347,11 @@
     "tags": [
       "Pâtes",
       "Végétarien"
-    ]
+    ],
+    "id": 19,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Pot au feu",
@@ -289,7 +365,11 @@
     ],
     "tags": [
       "Traditionnel"
-    ]
+    ],
+    "id": 20,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Porc au caramel",
@@ -304,7 +384,11 @@
     ],
     "tags": [
       "Asiatique"
-    ]
+    ],
+    "id": 21,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Grillade de riz",
@@ -318,7 +402,11 @@
     ],
     "tags": [
       "Rapide"
-    ]
+    ],
+    "id": 22,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Saucisson à cuire",
@@ -332,7 +420,11 @@
     "tags": [
       "Traditionnel",
       "Cocotte"
-    ]
+    ],
+    "id": 23,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Poulet tikka Massala",
@@ -353,7 +445,11 @@
       "Thermomix",
       "WW",
       "Indien"
-    ]
+    ],
+    "id": 24,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Lasagne bolognaise",
@@ -372,7 +468,11 @@
     "tags": [
       "Thermomix",
       "Pâtes"
-    ]
+    ],
+    "id": 25,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Hachis au potimarron",
@@ -390,7 +490,11 @@
     "tags": [
       "WW",
       "Gratin"
-    ]
+    ],
+    "id": 26,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Tartiflette",
@@ -405,7 +509,11 @@
     "tags": [
       "Fromage",
       "Hiver"
-    ]
+    ],
+    "id": 27,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Gratin de pâtes",
@@ -420,7 +528,11 @@
     ],
     "tags": [
       "Pâtes"
-    ]
+    ],
+    "id": 28,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Gratin de pâtes au thon (WW)",
@@ -441,7 +553,11 @@
     "tags": [
       "WW",
       "Pâtes"
-    ]
+    ],
+    "id": 29,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Fondue de poireaux au saumon (WW)",
@@ -459,7 +575,11 @@
     "tags": [
       "WW",
       "Poisson"
-    ]
+    ],
+    "id": 30,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Gâteau au yaourt",
@@ -471,7 +591,11 @@
     ],
     "tags": [
       "Classique"
-    ]
+    ],
+    "id": 31,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Fondant au chocolat",
@@ -487,7 +611,11 @@
     ],
     "tags": [
       "Chocolat"
-    ]
+    ],
+    "id": 32,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Tarte banane / chocolat",
@@ -505,7 +633,11 @@
     "tags": [
       "Tarte",
       "Chocolat"
-    ]
+    ],
+    "id": 33,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Tarte pralinées",
@@ -519,7 +651,11 @@
     ],
     "tags": [
       "Tarte"
-    ]
+    ],
+    "id": 34,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Tarte aux poires",
@@ -535,7 +671,11 @@
     "tags": [
       "Tarte",
       "Fruits"
-    ]
+    ],
+    "id": 35,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Tarte aux pommes",
@@ -554,7 +694,11 @@
     "tags": [
       "Tarte",
       "Thermomix"
-    ]
+    ],
+    "id": 36,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Flognarde",
@@ -565,7 +709,11 @@
     ],
     "tags": [
       "Rapide"
-    ]
+    ],
+    "id": 37,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Madeleines au yaourt",
@@ -579,7 +727,11 @@
     ],
     "tags": [
       "Goûter"
-    ]
+    ],
+    "id": 38,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Mandises",
@@ -599,7 +751,11 @@
     "tags": [
       "Thermomix",
       "Goûter"
-    ]
+    ],
+    "id": 39,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Cookies",
@@ -616,7 +772,11 @@
     ],
     "tags": [
       "Goûter"
-    ]
+    ],
+    "id": 40,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Cake à la banane (WW)",
@@ -635,7 +795,11 @@
     "tags": [
       "WW",
       "Thermomix"
-    ]
+    ],
+    "id": 41,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Cake à la banane (Léger)",
@@ -652,7 +816,11 @@
     "notes": "14 parts - 6 SP/part. Se conserve 3 à 4 j dans 1 récipient hermétique. Peut é congelée pdt 3 mois.",
     "tags": [
       "Léger"
-    ]
+    ],
+    "id": 42,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Gaufres",
@@ -665,7 +833,11 @@
     ],
     "tags": [
       "Goûter"
-    ]
+    ],
+    "id": 43,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Crêpes",
@@ -673,7 +845,11 @@
     "ingredients": "6 oeufs, 1L de lait, 400g de farine, 50g de beurre, 100g de sucre +/- 1 sachet de sucre vanillée.",
     "instructions": [
       "Mélanger 6 oeufs, 1L de lait, 400g de farine, 50g de beurre, 100g de sucre +/- 1 sachet de sucre vanillée."
-    ]
+    ],
+    "id": 44,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Bowl cake Banane/chocolat",
@@ -687,7 +863,11 @@
     "tags": [
       "WW",
       "Rapide"
-    ]
+    ],
+    "id": 45,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Granola maison",
@@ -705,7 +885,11 @@
     "tags": [
       "Thermomix",
       "WW"
-    ]
+    ],
+    "id": 46,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   },
   {
     "title": "Compote d'ananas",
@@ -719,6 +903,10 @@
     "tags": [
       "Thermomix",
       "Fruits"
-    ]
+    ],
+    "id": 47,
+    "image": "/default_recipe.png",
+    "prepTime": "15",
+    "difficulty": "Facile"
   }
 ]

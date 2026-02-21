@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['vite.svg', 'pwa-192x192.png', 'pwa-512x512.png'],
+      includeAssets: ['vite.svg', 'pwa-192x192.png', 'pwa-512x512.png', 'logo_transparent.png', 'data/recipes.json'],
       manifest: {
         name: 'Recettes de Mama',
         short_name: 'Recettes',
