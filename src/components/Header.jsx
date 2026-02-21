@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ChefHat, ArrowLeft, Sun, Moon } from 'lucide-react';
+import { ChefHat, ArrowLeft, Sun, Moon, Trash2 } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 
@@ -18,7 +18,7 @@ export default function Header() {
                     <div className="flex items-center gap-2">
                         <ChefHat className="text-orange-600 dark:text-orange-500" />
                         <h1 className="font-serif font-bold text-lg text-orange-900 dark:text-orange-50 leading-tight">
-                            Les recettes de Mama
+                            Les recettes de Mama MATTIO
                         </h1>
                     </div>
                 ) : (
@@ -30,14 +30,25 @@ export default function Header() {
                     </button>
                 )}
 
-                {/* Theme Toggle Button */}
-                <button
-                    onClick={toggleTheme}
-                    className="p-2 rounded-full bg-orange-50 dark:bg-gray-800 text-orange-600 dark:text-orange-400 active:scale-95 transition-all"
-                    aria-label="Toggle Dark Mode"
-                >
-                    {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                </button>
+                <div className="flex items-center gap-2">
+                    {/* Trash Button */}
+                    <button
+                        onClick={() => navigate('/trash')}
+                        className="p-2 rounded-full bg-orange-50 dark:bg-gray-800 text-orange-600 dark:text-orange-400 active:scale-95 transition-all"
+                        aria-label="View Trash"
+                    >
+                        <Trash2 size={20} />
+                    </button>
+
+                    {/* Theme Toggle Button */}
+                    <button
+                        onClick={toggleTheme}
+                        className="p-2 rounded-full bg-orange-50 dark:bg-gray-800 text-orange-600 dark:text-orange-400 active:scale-95 transition-all"
+                        aria-label="Toggle Dark Mode"
+                    >
+                        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                    </button>
+                </div>
             </div>
         </header>
     );

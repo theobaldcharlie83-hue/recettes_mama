@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
-import { Utensils, BookOpen, Heart, ArrowLeft, Loader2, Carrot, Drumstick, Cookie, Coffee, Droplet, Martini, ChefHat } from 'lucide-react';
+import { Utensils, BookOpen, Heart, ArrowLeft, Loader2, Carrot, Drumstick, Cookie, Coffee, Droplet, Martini, ChefHat, Trash2, Send, Share, Check, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const getCategoryIcon = (chapter, size = 120) => {
@@ -17,12 +17,59 @@ const getCategoryIcon = (chapter, size = 120) => {
 export default function RecipePage() {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { recipes, loading, favorites, toggleFavorite, defaultPortions } = useContext(AppContext);
+    const { recipes, loading, favorites, toggleFavorite, defaultPortions, moveToTrash } = useContext(AppContext);
 
     // State pour les portions dynamiques
     const [portions, setPortions] = useState(defaultPortions);
+    const [copySuccess, setCopySuccess] = useState(null); // 'propose' or 'share'
 
     const recipe = recipes.find(r => r.id === parseInt(id) || r.id === id);
+
+    const handleDelete = () => {
+        if (window.confirm("Mettre cette recette à la corbeille ?")) {
+            moveToTrash(recipe.id);
+            navigate('/');
+        }
+    };
+
+    const handlePropose = () => {
+        const cleanRecipe = {
+            title: recipe.title,
+            chapter: recipe.chapter,
+            ingredients: recipe.ingredients,
+            instructions: recipe.instructions,
+            tags: recipe.tags || [],
+            prepTime: recipe.prepTime || "",
+            difficulty: recipe.difficulty || "Facile"
+        };
+        const recipeData = JSON.stringify(cleanRecipe, null, 2);
+
+        navigator.clipboard.writeText(recipeData)
+            .then(() => {
+                setCopySuccess('propose');
+                setTimeout(() => setCopySuccess(null), 2000);
+                const subject = encodeURIComponent(`Proposition de recette : ${recipe.title}`);
+                const body = encodeURIComponent(`Voici ma nouvelle recette pour l'application :\n\n${recipeData}`);
+
+                if (window.confirm("Code de la recette copié ! Souhaites-tu aussi ouvrir ton application d'e-mail pour l'envoyer au chef ?")) {
+                    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+                }
+            })
+            .catch(err => {
+                console.error('Erreur lors de la copie :', err);
+                alert("Erreur lors de la copie du code.");
+            });
+    };
+
+    const handleShare = () => {
+        const shareText = `Découvre cette recette : ${recipe.title}\n\nIngrédients :\n${recipe.ingredients}`;
+        navigator.clipboard.writeText(shareText)
+            .then(() => {
+                setCopySuccess('share');
+                setTimeout(() => setCopySuccess(null), 2000);
+            })
+            .catch(err => console.error('Erreur partage:', err));
+    };
 
     if (loading) {
         return (
@@ -87,12 +134,64 @@ export default function RecipePage() {
                     <Heart size={22} className={isFavorite ? 'fill-red-500 text-red-500' : 'text-gray-500 dark:text-gray-400'} />
                 </button>
 
+                {recipe.isCustom ? (
+                    <div className="absolute top-4 right-20 flex gap-2 z-10">
+                        <button
+                            onClick={handlePropose}
+                            className={`p-3 rounded-full backdrop-blur shadow-sm transition-all flex items-center justify-center ${copySuccess === 'propose' ? 'bg-green-500 text-white' : 'bg-white/50 dark:bg-gray-800/50 text-gray-500 dark:text-gray-400 hover:text-orange-600 hover:scale-110'}`}
+                            title="Proposer la recette"
+                        >
+                            {copySuccess === 'propose' ? <Check size={22} /> : <Send size={22} />}
+                        </button>
+                        <button
+                            onClick={handleDelete}
+                            className="p-3 rounded-full bg-white/50 dark:bg-gray-800/50 backdrop-blur shadow-sm hover:text-red-600 hover:scale-110 active:scale-95 transition-all text-gray-500 dark:text-gray-400 ml-2"
+                            title="Mettre à la corbeille"
+                        >
+                            <Trash2 size={22} />
+                        </button>
+                    </div>
+                ) : (
+                    <div className="absolute top-4 right-20 flex gap-2 z-10">
+                        <button
+                            onClick={handleShare}
+                            className={`p-3 rounded-full backdrop-blur shadow-sm transition-all flex items-center justify-center ${copySuccess === 'share' ? 'bg-green-500 text-white' : 'bg-white/50 dark:bg-gray-800/50 text-gray-500 dark:text-gray-400 hover:text-blue-600 hover:scale-110'}`}
+                            title="Partager la recette"
+                        >
+                            {copySuccess === 'share' ? <Check size={22} /> : <Share size={22} />}
+                        </button>
+                        <button
+                            onClick={handleDelete}
+                            className="p-3 rounded-full bg-white/50 dark:bg-gray-800/50 backdrop-blur shadow-sm hover:text-red-600 hover:scale-110 active:scale-95 transition-all text-gray-500 dark:text-gray-400 ml-2"
+                            title="Mettre à la corbeille"
+                        >
+                            <Trash2 size={22} />
+                        </button>
+                    </div>
+                )}
+
                 <span className="inline-block px-3 py-1 bg-white/80 dark:bg-gray-800/80 backdrop-blur rounded-full text-xs font-bold text-orange-800 dark:text-orange-400 mb-3 border border-orange-200 dark:border-gray-700 shadow-sm">
                     {recipe.chapter}
                 </span>
                 <h2 className="font-serif text-3xl font-bold text-gray-900 dark:text-gray-50 leading-tight">
                     {recipe.title}
                 </h2>
+
+                <div className="flex items-center justify-center gap-4 mt-4 text-xs font-bold text-gray-500 dark:text-gray-400 bg-white/60 dark:bg-gray-800/60 backdrop-blur-md px-5 py-2 rounded-2xl border border-white dark:border-gray-700 shadow-xl overflow-hidden relative group/header">
+                    {/* Subtle Shine Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/header:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+
+                    {recipe.prepTime && (
+                        <span className="flex items-center gap-2 group-hover/header:text-orange-600 dark:group-hover/header:text-orange-400 transition-colors">
+                            <Clock size={14} className="opacity-70" /> {recipe.prepTime}
+                        </span>
+                    )}
+                    {recipe.difficulty && (
+                        <span className="flex items-center gap-2 group-hover/header:text-orange-600 dark:group-hover/header:text-orange-400 transition-colors border-l pl-4 dark:border-gray-700">
+                            <ChefHat size={14} className="opacity-70" /> {recipe.difficulty}
+                        </span>
+                    )}
+                </div>
 
                 {recipe.tags && (
                     <div className="flex flex-wrap justify-center gap-2 mt-4">

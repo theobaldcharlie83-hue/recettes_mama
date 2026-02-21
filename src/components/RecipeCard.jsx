@@ -57,6 +57,11 @@ export default function RecipeCard({ recipe }) {
                 {recipe.title}
             </h3>
             <div className="flex flex-wrap gap-2 mt-auto">
+                {recipe.isCustom && (
+                    <span className="text-[10px] px-2 py-0.5 rounded border bg-orange-100 text-orange-700 border-orange-200 dark:bg-orange-900/40 dark:text-orange-300 dark:border-orange-800 font-bold">
+                        🏠 Recette Perso
+                    </span>
+                )}
                 {recipe.tags && recipe.tags.slice(0, 3).map(tag => (
                     <span
                         key={tag}
@@ -74,7 +79,7 @@ export default function RecipeCard({ recipe }) {
 
             {/* Ajout temporaire pour le design, on pourra ajouter un champ "time" et "difficulty" plus tard */}
             <div className="absolute top-4 left-4 flex items-center gap-2 text-[10px] text-gray-500 font-medium bg-white/80 dark:bg-gray-900/80 px-2 py-1 rounded-md backdrop-blur shadow-sm">
-                {recipe.prepTime && <span>⏱️ {recipe.prepTime}'</span>}
+                {recipe.prepTime && <span>⏱️ {recipe.prepTime}</span>}
                 {recipe.difficulty && <span>🍳 {recipe.difficulty}</span>}
             </div>
         </div>

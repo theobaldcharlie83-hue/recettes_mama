@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Heart } from 'lucide-react';
+import { Home, Heart, PlusCircle } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function BottomNav() {
@@ -8,6 +8,7 @@ export default function BottomNav() {
 
     const tabs = [
         { path: '/', label: 'Accueil', icon: Home },
+        { path: '/add', label: 'Ajouter', icon: PlusCircle },
         { path: '/favorites', label: 'Coups de cœur', icon: Heart }
     ];
 
@@ -22,8 +23,8 @@ export default function BottomNav() {
                             key={tab.path}
                             onClick={() => navigate(tab.path)}
                             className={`flex flex-col items-center justify-center w-full h-full transition-colors ${active
-                                    ? 'text-orange-600 dark:text-orange-400'
-                                    : 'text-gray-400 dark:text-gray-500 hover:text-orange-300 dark:hover:text-gray-400'
+                                ? 'text-orange-600 dark:text-orange-400'
+                                : 'text-gray-400 dark:text-gray-500 hover:text-orange-300 dark:hover:text-gray-400'
                                 }`}
                         >
                             <Icon size={24} className={active ? 'fill-orange-100 dark:fill-orange-900/30' : ''} />

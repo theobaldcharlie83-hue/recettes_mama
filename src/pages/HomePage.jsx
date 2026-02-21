@@ -1,6 +1,6 @@
 import React, { useContext, useState, useMemo } from 'react';
 import { AppContext } from '../context/AppContext';
-import { Search, XCircle, BookOpen, Utensils, Carrot, Drumstick, Cookie, Coffee, Droplet, Martini, ChefHat } from 'lucide-react';
+import { Search, XCircle, BookOpen, Utensils, Carrot, Drumstick, Cookie, Coffee, Droplet, Martini, ChefHat, ArrowLeft } from 'lucide-react';
 import RecipeCard from '../components/RecipeCard';
 
 const CHAPTERS = [
@@ -21,15 +21,23 @@ const getIcon = (chapter) => {
     return <ChefHat size={24} />;
 };
 
+const normalizeString = (str) => {
+    if (!str) return "";
+    return str
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+};
+
 export default function HomePage() {
     const { recipes, loading } = useContext(AppContext);
     const [searchTerm, setSearchTerm] = useState("");
     const [activeChapter, setActiveChapter] = useState("Tous");
 
     const filteredRecipes = useMemo(() => {
+        const normalizedSearch = normalizeString(searchTerm);
         return recipes.filter(r => {
-            const matchesSearch = r.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                r.ingredients.toLowerCase().includes(searchTerm.toLowerCase());
+            const matchesSearch = normalizeString(r.title).includes(normalizedSearch);
             const matchesChapter = activeChapter === "Tous" || r.chapter === activeChapter;
             return matchesSearch && matchesChapter;
         });
@@ -83,16 +91,26 @@ export default function HomePage() {
                 </div>
             )}
 
-            {/* ACTIVE FILTER BADGE */}
-            {activeChapter !== 'Tous' && (
-                <div className="mb-4 flex items-center gap-2">
+            {/* BACK TO SUMMARY BUTTON */}
+            {(activeChapter !== 'Tous' || searchTerm) && (
+                <div className="mb-6 flex flex-col gap-3">
                     <button
-                        onClick={() => setActiveChapter("Tous")}
-                        className="p-1 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                        onClick={() => {
+                            setActiveChapter("Tous");
+                            setSearchTerm("");
+                        }}
+                        className="flex items-center justify-center gap-2 text-white bg-orange-600 dark:bg-orange-500 font-bold text-xs py-2 px-4 rounded-lg hover:bg-orange-700 transition-all active:scale-95 shadow-sm w-fit mx-auto"
                     >
-                        <XCircle size={16} />
+                        <ArrowLeft size={14} />
+                        Retour au sommaire
                     </button>
-                    <span className="font-bold text-orange-800 dark:text-orange-200">{activeChapter}</span>
+                    {activeChapter !== 'Tous' && (
+                        <div className="text-center">
+                            <span className="text-xs font-serif italic text-gray-500 dark:text-gray-400">
+                                Catégorie : <span className="text-orange-900 dark:text-orange-50 font-bold not-italic">{activeChapter}</span>
+                            </span>
+                        </div>
+                    )}
                 </div>
             )}
 
@@ -100,8 +118,14 @@ export default function HomePage() {
             {(activeChapter !== 'Tous' || searchTerm) && (
                 <div className="grid gap-4 pb-4">
                     {filteredRecipes.length === 0 ? (
-                        <div className="text-center py-10 text-gray-500 dark:text-gray-400 italic bg-white dark:bg-gray-900 rounded-xl border border-dashed border-gray-300 dark:border-gray-700">
-                            <p>Aucune recette trouvée pour "{searchTerm}".</p>
+                        <div className="text-center py-16 bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-orange-50 dark:border-gray-800 animate-fade-in px-6">
+                            <div className="w-16 h-16 bg-orange-50 dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <Search className="text-orange-300 dark:text-gray-600" size={32} />
+                            </div>
+                            <p className="text-gray-500 dark:text-gray-400 font-medium mb-2">Aucune recette trouvée</p>
+                            <p className="text-gray-400 dark:text-gray-500 text-sm leading-relaxed max-w-[220px] mx-auto">
+                                Nous n'avons rien trouvé pour "<span className="text-orange-600 dark:text-orange-400 font-bold">{searchTerm}</span>".
+                            </p>
                         </div>
                     ) : (
                         filteredRecipes.map(recipe => (
