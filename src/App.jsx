@@ -49,7 +49,7 @@ export default function App() {
                 </Route>
             </Routes>
             <div className="fixed bottom-1 right-2 text-[10px] text-gray-400/80 dark:text-gray-500/80 z-[100] pointer-events-none font-mono font-bold drop-shadow-sm">
-                v1.1
+                V 1.2.
             </div>
         </>
     );
