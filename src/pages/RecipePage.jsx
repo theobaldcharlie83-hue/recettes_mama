@@ -33,32 +33,51 @@ export default function RecipePage() {
     };
 
     const handlePropose = () => {
-        const cleanRecipe = {
-            title: recipe.title,
-            chapter: recipe.chapter,
-            ingredients: recipe.ingredients,
-            instructions: recipe.instructions,
-            tags: recipe.tags || [],
-            prepTime: recipe.prepTime || "",
-            difficulty: recipe.difficulty || "Facile"
-        };
-        const recipeData = JSON.stringify(cleanRecipe, null, 2);
+        const instructionsList = (recipe.instructions || [])
+            .map((step, i) => `  ${i + 1}. ${step}`)
+            .join('\n');
+        const tagsList = (recipe.tags || []).join(', ') || 'Aucun';
 
-        navigator.clipboard.writeText(recipeData)
+        const emailBody =
+            `═══════════════════════════════════════
+🍽️  PROPOSITION DE RECETTE
+═══════════════════════════════════════
+
+📌 Titre        : ${recipe.title}
+📂 Chapitre     : ${recipe.chapter}
+⏱️  Temps        : ${recipe.prepTime || 'Non renseigné'}
+👨‍🍳 Difficulté   : ${recipe.difficulty || 'Non renseignée'}
+🏷️  Tags         : ${tagsList}
+
+───────────────────────────────────────
+🥕 INGRÉDIENTS
+───────────────────────────────────────
+${recipe.ingredients || 'Non renseignés'}
+
+───────────────────────────────────────
+👩‍🍳 PRÉPARATION
+───────────────────────────────────────
+${instructionsList || 'Non renseignée'}
+${recipe.notes ? `\n───────────────────────────────────────\n📝 NOTES\n───────────────────────────────────────\n${recipe.notes}` : ''}
+
+═══════════════════════════════════════
+Recette envoyée depuis l'app Recettes de MaMa MATTIO
+═══════════════════════════════════════`;
+
+        const subject = encodeURIComponent(`🍽️ Proposition de recette : ${recipe.title}`);
+        const body = encodeURIComponent(emailBody);
+        const mailto = `mailto:theobald.charlie83@gmail.com?subject=${subject}&body=${body}`;
+
+        navigator.clipboard.writeText(emailBody)
             .then(() => {
                 setCopySuccess('propose');
                 setTimeout(() => setCopySuccess(null), 2000);
-                const subject = encodeURIComponent(`Proposition de recette : ${recipe.title}`);
-                const body = encodeURIComponent(`Voici ma nouvelle recette pour l'application :\n\n${recipeData}`);
-
-                if (window.confirm("Code de la recette copié ! Souhaites-tu aussi ouvrir ton application d'e-mail pour l'envoyer au chef ?")) {
-                    window.location.href = `mailto:?subject=${subject}&body=${body}`;
-                }
             })
-            .catch(err => {
-                console.error('Erreur lors de la copie :', err);
-                alert("Erreur lors de la copie du code.");
-            });
+            .catch(() => { }); // Silencieux si clipboard échoue
+
+        if (window.confirm("Souhaitez-vous ouvrir votre application e-mail pour envoyer cette recette au chef ?")) {
+            window.location.href = mailto;
+        }
     };
 
     const handleShare = () => {
