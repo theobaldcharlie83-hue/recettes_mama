@@ -1,7 +1,17 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Heart } from 'lucide-react';
+import { Heart, Search, XCircle, BookOpen, Utensils, Carrot, Drumstick, Cookie, Coffee, Droplet, Martini, ChefHat } from 'lucide-react';
 import { AppContext } from '../context/AppContext';
+
+const getCategoryIcon = (chapter, size = 48) => {
+    if (!chapter) return <ChefHat size={size} />;
+    if (chapter.includes('Sauces')) return <Droplet size={size} />;
+    if (chapter.includes('Entrées')) return <Martini size={size} />;
+    if (chapter.includes('Légumes')) return <Carrot size={size} />;
+    if (chapter.includes('Plats')) return <Drumstick size={size} />;
+    if (chapter.includes('Desserts')) return <Cookie size={size} />;
+    return <ChefHat size={size} />;
+};
 
 export default function RecipeCard({ recipe }) {
     const navigate = useNavigate();
@@ -27,10 +37,16 @@ export default function RecipeCard({ recipe }) {
                 <Heart size={18} className={isFavorite ? 'fill-red-500 text-red-500' : ''} />
             </button>
 
-            {recipe.image && (
-                <div className="w-full h-32 mb-3 rounded-lg overflow-hidden relative">
+            {recipe.image && recipe.image !== '/default_recipe.png' ? (
+                <div className="w-full h-32 mb-3 rounded-lg overflow-hidden relative shadow-sm">
                     <img src={recipe.image} alt={recipe.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                </div>
+            ) : (
+                <div className="w-full h-32 mb-3 rounded-lg overflow-hidden relative bg-orange-50/80 dark:bg-gray-800/80 border border-orange-100 dark:border-gray-700 flex items-center justify-center text-orange-400 dark:text-gray-500 shadow-sm transition-colors group-hover:bg-orange-100/80 dark:group-hover:bg-gray-700/80 group-hover:text-orange-500 dark:group-hover:text-orange-400">
+                    <div className="group-hover:scale-110 transition-transform duration-500 opacity-80">
+                        {getCategoryIcon(recipe.chapter, 48)}
+                    </div>
                 </div>
             )}
 

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useMemo } from 'react';
 import { AppContext } from '../context/AppContext';
-import { Search, XCircle, BookOpen, Utensils, Carrot, Drumstick, Cookie, Coffee } from 'lucide-react';
+import { Search, XCircle, BookOpen, Utensils, Carrot, Drumstick, Cookie, Coffee, Droplet, Martini, ChefHat } from 'lucide-react';
 import RecipeCard from '../components/RecipeCard';
 
 const CHAPTERS = [
@@ -13,12 +13,12 @@ const CHAPTERS = [
 ];
 
 const getIcon = (chapter) => {
-    if (chapter.includes('Sauces')) return <Utensils size={24} />;
-    if (chapter.includes('Entrées')) return <Carrot size={24} />;
-    if (chapter.includes('Légumes')) return <Utensils size={24} />;
+    if (chapter.includes('Sauces')) return <Droplet size={24} />;
+    if (chapter.includes('Entrées')) return <Martini size={24} />;
+    if (chapter.includes('Légumes')) return <Carrot size={24} />;
     if (chapter.includes('Plats')) return <Drumstick size={24} />;
     if (chapter.includes('Desserts')) return <Cookie size={24} />;
-    return <Coffee size={24} />;
+    return <ChefHat size={24} />;
 };
 
 export default function HomePage() {
@@ -97,17 +97,19 @@ export default function HomePage() {
             )}
 
             {/* RECIPE LIST */}
-            <div className="grid gap-4 pb-4">
-                {filteredRecipes.length === 0 ? (
-                    <div className="text-center py-10 text-gray-500 dark:text-gray-400 italic bg-white dark:bg-gray-900 rounded-xl border border-dashed border-gray-300 dark:border-gray-700">
-                        <p>Aucune recette trouvée pour "{searchTerm}".</p>
-                    </div>
-                ) : (
-                    filteredRecipes.map(recipe => (
-                        <RecipeCard key={recipe.id} recipe={recipe} />
-                    ))
-                )}
-            </div>
+            {(activeChapter !== 'Tous' || searchTerm) && (
+                <div className="grid gap-4 pb-4">
+                    {filteredRecipes.length === 0 ? (
+                        <div className="text-center py-10 text-gray-500 dark:text-gray-400 italic bg-white dark:bg-gray-900 rounded-xl border border-dashed border-gray-300 dark:border-gray-700">
+                            <p>Aucune recette trouvée pour "{searchTerm}".</p>
+                        </div>
+                    ) : (
+                        filteredRecipes.map(recipe => (
+                            <RecipeCard key={recipe.id} recipe={recipe} />
+                        ))
+                    )}
+                </div>
+            )}
         </div>
     );
 }
