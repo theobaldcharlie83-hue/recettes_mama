@@ -1,15 +1,19 @@
-import React from 'react';
-import { Home, Heart, PlusCircle } from 'lucide-react';
+import React, { useContext } from 'react';
+import { Home, Heart, PlusCircle, ShoppingCart } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { AppContext } from '../context/AppContext';
 
 export default function BottomNav() {
     const location = useLocation();
     const navigate = useNavigate();
+    const { shoppingList } = useContext(AppContext);
+    const uncheckedCount = shoppingList.filter(i => !i.checked).length;
 
     const tabs = [
         { path: '/', label: 'Accueil', icon: Home },
         { path: '/add', label: 'Ajouter', icon: PlusCircle },
-        { path: '/favorites', label: 'Coups de cœur', icon: Heart }
+        { path: '/favorites', label: 'Coups de cœur', icon: Heart },
+        { path: '/shopping-list', label: 'Courses', icon: ShoppingCart, badge: uncheckedCount }
     ];
 
     return (
@@ -22,12 +26,19 @@ export default function BottomNav() {
                         <button
                             key={tab.path}
                             onClick={() => navigate(tab.path)}
-                            className={`flex flex-col items-center justify-center w-full h-full transition-colors ${active
+                            className={`relative flex flex-col items-center justify-center w-full h-full transition-colors ${active
                                 ? 'text-orange-600 dark:text-orange-400'
                                 : 'text-gray-400 dark:text-gray-500 hover:text-orange-300 dark:hover:text-gray-400'
                                 }`}
                         >
-                            <Icon size={24} className={active ? 'fill-orange-100 dark:fill-orange-900/30' : ''} />
+                            <span className="relative">
+                                <Icon size={24} className={active ? 'fill-orange-100 dark:fill-orange-900/30' : ''} />
+                                {!!tab.badge && (
+                                    <span className="absolute -top-1.5 -right-2 min-w-[16px] h-4 px-1 rounded-full bg-orange-600 text-white text-[9px] font-bold flex items-center justify-center">
+                                        {tab.badge > 9 ? '9+' : tab.badge}
+                                    </span>
+                                )}
+                            </span>
                             <span className="text-[10px] mt-1 font-medium">{tab.label}</span>
                         </button>
                     );

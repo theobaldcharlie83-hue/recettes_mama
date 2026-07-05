@@ -12,9 +12,12 @@
       "Base"
     ],
     "id": 1,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/1.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114002.jpg"
+    ]
   },
   {
     "title": "Sauce Caesar",
@@ -30,9 +33,12 @@
       "Thermomix"
     ],
     "id": 2,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/2.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113958.jpg"
+    ]
   },
   {
     "title": "Sauce à la Grenade",
@@ -45,9 +51,12 @@
       "Sauce"
     ],
     "id": 3,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/3.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114013.jpg"
+    ]
   },
   {
     "title": "Sauce à Tartiner (Dip Apéro)",
@@ -60,9 +69,12 @@
       "Apéro"
     ],
     "id": 4,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/4.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114059.jpg"
+    ]
   },
   {
     "title": "Accras de Morue",
@@ -80,9 +92,12 @@
       "Friture"
     ],
     "id": 5,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/5.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113412.jpg"
+    ]
   },
   {
     "title": "Velouté aux Poivrons et au Boursin",
@@ -99,9 +114,13 @@
       "Cocotte Minute"
     ],
     "id": 6,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/6.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113241.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Soupe de Légumes",
@@ -116,9 +135,13 @@
       "Thermomix"
     ],
     "id": 7,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/7.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114018.jpg"
+    ],
+    "basePortions": 6
   },
   {
     "title": "Tarte Fine Courgettes / Chèvre",
@@ -136,9 +159,13 @@
       "Tarte"
     ],
     "id": 8,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/8.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113353.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Quiche Tomate / Thon",
@@ -155,9 +182,12 @@
       "Quiche"
     ],
     "id": 9,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/9.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113435.jpg"
+    ]
   },
   {
     "title": "Clafoutis Salé au Chèvre",
@@ -174,9 +204,13 @@
       "Clafoutis"
     ],
     "id": 10,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/10.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113359.jpg"
+    ],
+    "basePortions": 6
   },
   {
     "title": "Clafoutis de Tomates au Jambon",
@@ -192,9 +226,13 @@
       "Clafoutis"
     ],
     "id": 11,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/11.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113212.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Soufflé de Butternut",
@@ -210,9 +248,13 @@
       "Soufflé"
     ],
     "id": 12,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/12.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113235.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Gratin de Courgettes",
@@ -228,9 +270,13 @@
       "Gratin"
     ],
     "id": 13,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/13.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113200.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Ratatouille",
@@ -247,9 +293,13 @@
       "Cocotte"
     ],
     "id": 14,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/14.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113141.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Tian Provençal",
@@ -265,9 +315,13 @@
       "Légumes"
     ],
     "id": 15,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/15.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114125.jpg"
+    ],
+    "basePortions": 6
   },
   {
     "title": "Courgettes / Feta rôtie",
@@ -285,9 +339,13 @@
       "Légumes"
     ],
     "id": 16,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/16.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114055.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Jardinière",
@@ -304,9 +362,13 @@
       "Cocotte"
     ],
     "id": 17,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/17.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113347.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Gratin de Butternut",
@@ -327,9 +389,13 @@
       "Gratin"
     ],
     "id": 18,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/18.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114026.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Lasagnes épinard / Ricotta",
@@ -349,9 +415,14 @@
       "Végétarien"
     ],
     "id": 19,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/19.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114114.jpg",
+      "20251214_113229.jpg"
+    ],
+    "basePortions": 6
   },
   {
     "title": "Pot au feu",
@@ -367,9 +438,13 @@
       "Traditionnel"
     ],
     "id": 20,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/20.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113155.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Porc au caramel",
@@ -386,9 +461,13 @@
       "Asiatique"
     ],
     "id": 21,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/21.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113217.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Grillade de riz",
@@ -404,9 +483,13 @@
       "Rapide"
     ],
     "id": 22,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/22.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113149.jpg"
+    ],
+    "basePortions": 2
   },
   {
     "title": "Saucisson à cuire",
@@ -422,9 +505,12 @@
       "Cocotte"
     ],
     "id": 23,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/23.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113205.jpg"
+    ]
   },
   {
     "title": "Poulet tikka Massala",
@@ -447,9 +533,13 @@
       "Indien"
     ],
     "id": 24,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/24.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113835.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Lasagne bolognaise",
@@ -470,9 +560,13 @@
       "Pâtes"
     ],
     "id": 25,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/25.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114049.jpg"
+    ],
+    "basePortions": 6
   },
   {
     "title": "Hachis au potimarron",
@@ -492,9 +586,13 @@
       "Gratin"
     ],
     "id": 26,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/26.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113322.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Tartiflette",
@@ -511,9 +609,13 @@
       "Hiver"
     ],
     "id": 27,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/27.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113340.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Gratin de pâtes",
@@ -530,9 +632,12 @@
       "Pâtes"
     ],
     "id": 28,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/28.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113811.jpg"
+    ]
   },
   {
     "title": "Gratin de pâtes au thon (WW)",
@@ -555,9 +660,12 @@
       "Pâtes"
     ],
     "id": 29,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/29.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113816.jpg"
+    ]
   },
   {
     "title": "Fondue de poireaux au saumon (WW)",
@@ -577,9 +685,13 @@
       "Poisson"
     ],
     "id": 30,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/30.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113828.jpg"
+    ],
+    "basePortions": 4
   },
   {
     "title": "Gâteau au yaourt",
@@ -593,9 +705,13 @@
       "Classique"
     ],
     "id": 31,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/31.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113223.jpg"
+    ],
+    "basePortions": 6
   },
   {
     "title": "Fondant au chocolat",
@@ -613,9 +729,13 @@
       "Chocolat"
     ],
     "id": 32,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/32.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113405.jpg"
+    ],
+    "basePortions": 11
   },
   {
     "title": "Tarte banane / chocolat",
@@ -635,9 +755,13 @@
       "Chocolat"
     ],
     "id": 33,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/33.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114131.jpg"
+    ],
+    "basePortions": 8
   },
   {
     "title": "Tarte pralinées",
@@ -653,9 +777,13 @@
       "Tarte"
     ],
     "id": 34,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/34.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113328.jpg"
+    ],
+    "basePortions": 6
   },
   {
     "title": "Tarte aux poires",
@@ -673,9 +801,12 @@
       "Fruits"
     ],
     "id": 35,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/35.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113333.jpg"
+    ]
   },
   {
     "title": "Tarte aux pommes",
@@ -696,9 +827,13 @@
       "Thermomix"
     ],
     "id": 36,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/36.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114037.jpg"
+    ],
+    "basePortions": 6
   },
   {
     "title": "Flognarde",
@@ -711,9 +846,12 @@
       "Rapide"
     ],
     "id": 37,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/37.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113423.jpg"
+    ]
   },
   {
     "title": "Madeleines au yaourt",
@@ -729,9 +867,13 @@
       "Goûter"
     ],
     "id": 38,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/38.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114137.jpg"
+    ],
+    "basePortions": 15
   },
   {
     "title": "Mandises",
@@ -753,9 +895,13 @@
       "Goûter"
     ],
     "id": 39,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/39.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114043.jpg"
+    ],
+    "basePortions": 14
   },
   {
     "title": "Cookies",
@@ -774,9 +920,13 @@
       "Goûter"
     ],
     "id": 40,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/40.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114031.jpg"
+    ],
+    "basePortions": 12
   },
   {
     "title": "Cake à la banane (WW)",
@@ -797,9 +947,13 @@
       "Thermomix"
     ],
     "id": 41,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/41.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113843.jpg"
+    ],
+    "basePortions": 16
   },
   {
     "title": "Cake à la banane (Léger)",
@@ -818,9 +972,13 @@
       "Léger"
     ],
     "id": 42,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/42.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113952.jpg"
+    ],
+    "basePortions": 14
   },
   {
     "title": "Gaufres",
@@ -835,9 +993,13 @@
       "Goûter"
     ],
     "id": 43,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/43.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_114108.jpg"
+    ],
+    "basePortions": 9
   },
   {
     "title": "Crêpes",
@@ -847,9 +1009,13 @@
       "Mélanger 6 oeufs, 1L de lait, 400g de farine, 50g de beurre, 100g de sucre +/- 1 sachet de sucre vanillée."
     ],
     "id": 44,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/44.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113417.jpg"
+    ],
+    "basePortions": 30
   },
   {
     "title": "Bowl cake Banane/chocolat",
@@ -865,9 +1031,12 @@
       "Rapide"
     ],
     "id": 45,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/45.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113429.jpg"
+    ]
   },
   {
     "title": "Granola maison",
@@ -887,9 +1056,12 @@
       "WW"
     ],
     "id": 46,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/46.jpg",
     "prepTime": "15 min",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113822.jpg"
+    ]
   },
   {
     "title": "Compote d'ananas",
@@ -905,78 +1077,131 @@
       "Fruits"
     ],
     "id": 47,
-    "image": "/default_recipe.png",
+    "image": "/illustrations/47.jpg",
     "prepTime": "15",
-    "difficulty": "Facile"
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113946.jpg"
+    ]
   },
   {
     "id": 48,
     "title": "Porc sauté aux nouilles",
     "chapter": "Plats de Résistance",
-    "ingredients": "À compléter...",
+    "ingredients": "Huile d'olive (4cc), 2 oignons, 200g de haricots verts, 100g de poivrons, 200g de filet mignon de porc, 15g d'ail en poudre, 2 CS de sauce soja salée, 1 cc de vinaigre, 200g de nouilles cuites.",
     "instructions": [
-      "À compléter..."
+      "Verser l'huile d'olive (4cc) dans un wok. Faire chauffer 3 min sur feu moyen.",
+      "Peler et émincer 2 oignons. Couper 200g d'haricots verts en morceaux d'1 centimètre.",
+      "Faire revenir les haricots verts et les oignons. Ajouter 100g de poivrons émincés. Faire cuire 10 min.",
+      "Ajouter le porc coupé en fines lanières (200g de filet mignon), 15g d'ail en poudre, 2 CS de sauce soja salée, 1 cc de vinaigre et les nouilles cuites (200g) (à cuire au préalable selon les indications du sachet).",
+      "Faire sauter pendant une quinzaine de minutes."
     ],
     "tags": [
-      "À compléter"
+      "WW",
+      "Asiatique"
     ],
-    "prepTime": "?",
-    "difficulty": "?"
+    "prepTime": "30 min",
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113849.jpg"
+    ],
+    "basePortions": 4,
+    "image": "/illustrations/48.jpg"
   },
   {
     "id": 49,
     "title": "Rouleaux de printemps",
     "chapter": "Apéritifs & Entrées",
-    "ingredients": "À compléter...",
+    "ingredients": "20g de vermicelles de riz, 100g de germe de soja, 100g de carottes, 35g de crevettes, feuilles de riz, feuilles de menthe, salade (10g), 125ml de sauce pour nem, jus de citron.",
     "instructions": [
-      "À compléter..."
+      "Mettre une casserole à bouillir. Plonger 20g de vermicelles de riz crus.",
+      "Rincer les 100g de germe de soja. Râper 100g de carottes. Couper les 35g de crevettes en 2 dans la longueur.",
+      "Mettre 1 feuille de riz dans un bol d'eau tiède pour la ramollir, puis la poser sur un linge.",
+      "Déposer au milieu de la feuille de riz 2 feuilles de menthe, 3 demi-crevettes, de la salade (10g), le germe de soja, les carottes râpées (~20g) puis le vermicelle (~10g). Asperger de quelques gouttes de sauce soja salée.",
+      "Rabattre un bord de la feuille, ramener les côtés et finir d'enrouler en serrant. Réserver au frais pendant 15 min.",
+      "Dans un ramequin, mélanger 125ml de sauce pour nem, 20g de carottes râpées et 15g de jus de citron : la sauce est prête."
     ],
     "tags": [
-      "À compléter"
+      "WW",
+      "Asiatique",
+      "Frais"
     ],
-    "prepTime": "?",
-    "difficulty": "?"
+    "prepTime": "45 min",
+    "difficulty": "Moyen",
+    "manuscriptImages": [
+      "20251214_113856.jpg"
+    ],
+    "basePortions": 4,
+    "image": "/illustrations/49.jpg"
   },
   {
     "id": 50,
     "title": "Tomates farcies au boeuf",
     "chapter": "Plats de Résistance",
-    "ingredients": "À compléter...",
+    "ingredients": "4 grosses tomates, 200g de bœuf haché 5%, 1 gousse d'ail, 1 échalote, 1 oignon, 1 tranche de pain de mie, un peu de lait, 4cc de persil, sel, poivre.",
     "instructions": [
-      "À compléter..."
+      "Préchauffer le four à 180°C. Découper un chapeau dans les tomates, les évider de leur pulpe.",
+      "Dans un récipient, mélanger 200g de bœuf haché 5% avec l'ail (1 gousse), 1 échalote, 1 oignon et 1 tranche de pain de mie (trempée dans du lait chaud et égouttée).",
+      "Ajouter 4cc de persil, saler et poivrer. Rajouter un peu de la pulpe des tomates.",
+      "Farcir les tomates avec la préparation, les disposer dans un plat à gratin.",
+      "Enfourner pour 40 min. Verser un peu d'eau au fond du plat de temps en temps et mouiller les tomates avec le jus pendant la cuisson. Recoiffer les tomates à mi-cuisson."
     ],
     "tags": [
-      "À compléter"
+      "WW",
+      "Four"
     ],
-    "prepTime": "?",
-    "difficulty": "?"
+    "prepTime": "1h",
+    "difficulty": "Moyen",
+    "manuscriptImages": [
+      "20251214_113902.jpg"
+    ],
+    "image": "/illustrations/50.jpg"
   },
   {
     "id": 51,
     "title": "Samoussa au thon",
     "chapter": "Apéritifs & Entrées",
-    "ingredients": "À compléter...",
+    "ingredients": "200g de thon, 6 Vache qui rit (ou Kiri), 1 CS de curry, persil, feuilles de brick, huile.",
     "instructions": [
-      "À compléter..."
+      "Émietter le thon (200g) et le mélanger avec 6 Vache qui rit (ou Kiri).",
+      "Ajouter le curry (1 CS) et le persil, puis mélanger.",
+      "Mettre 1 CS de farce sur la feuille de brick.",
+      "Plier en triangle et faire dorer dans une poêle avec de l'huile."
     ],
     "tags": [
-      "À compléter"
+      "WW",
+      "Apéritif"
     ],
-    "prepTime": "?",
-    "difficulty": "?"
+    "prepTime": "20 min",
+    "difficulty": "Facile",
+    "manuscriptImages": [
+      "20251214_113918.jpg"
+    ],
+    "image": "/illustrations/51.jpg"
   },
   {
     "id": 52,
     "title": "Colombo au porc",
     "chapter": "Plats de Résistance",
-    "ingredients": "À compléter...",
+    "ingredients": "600g de filet mignon de porc, jus de citron, 2 oignons, 1 gousse d'ail, 1 CS d'huile d'olive, 2 courgettes, 2 CS de colombo, 1 CS de garam masala, 1 pincée de piment, 250g de pommes de terre, riz (facultatif).",
     "instructions": [
-      "À compléter..."
+      "Couper 600g de filet mignon de porc, mariner avec du jus de citron pendant 2h.",
+      "Mettre 2 oignons + 1 gousse d'ail dans le bol du Thermomix. Mélanger 5 sec / vit 5.",
+      "Ajouter 1 CS d'huile d'olive + 2 courgettes. Cuire 10 min / 95°C / vit 1.",
+      "Ajouter 2 CS de colombo + 1 CS de garam masala.",
+      "Ajouter la viande + 1 pincée de piment. Cuire 10 min / 95°C / vit 1.",
+      "Cuire 250g de pommes de terre dans la cocotte et les rajouter.",
+      "Servir avec du riz si on veut."
     ],
     "tags": [
-      "À compléter"
+      "WW",
+      "Thermomix"
     ],
-    "prepTime": "?",
-    "difficulty": "?"
+    "prepTime": "2h30",
+    "difficulty": "Moyen",
+    "manuscriptImages": [
+      "20251214_113939.jpg"
+    ],
+    "image": "/illustrations/52.jpg"
   }
 ]

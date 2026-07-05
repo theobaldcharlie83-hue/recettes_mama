@@ -18,6 +18,10 @@ export default function RecipeCard({ recipe }) {
     const { favorites, toggleFavorite } = useContext(AppContext);
 
     const isFavorite = favorites.includes(recipe.id);
+    const hasCustomImage = recipe.image && recipe.image !== '/default_recipe.png';
+    const manuscriptThumb = recipe.manuscriptImages && recipe.manuscriptImages.length > 0
+        ? `/manuscript/thumb/${recipe.manuscriptImages[0]}`
+        : null;
 
     const handleFavoriteClick = (e) => {
         e.stopPropagation(); // Évite de naviguer quand on clique sur le cœur
@@ -32,14 +36,19 @@ export default function RecipeCard({ recipe }) {
             <button
                 onClick={handleFavoriteClick}
                 className="absolute top-3 right-3 p-2 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-400 hover:text-red-500 transition-colors z-10"
-                aria-label="Toggle favorite"
+                aria-label={isFavorite ? 'Retirer des coups de cœur' : 'Ajouter aux coups de cœur'}
             >
                 <Heart size={18} className={isFavorite ? 'fill-red-500 text-red-500' : ''} />
             </button>
 
-            {recipe.image && recipe.image !== '/default_recipe.png' ? (
+            {hasCustomImage ? (
                 <div className="w-full h-32 mb-3 rounded-lg overflow-hidden relative shadow-sm">
                     <img src={recipe.image} alt={recipe.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                </div>
+            ) : manuscriptThumb ? (
+                <div className="w-full h-32 mb-3 rounded-lg overflow-hidden relative shadow-sm">
+                    <img src={manuscriptThumb} alt={recipe.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 </div>
             ) : (
@@ -77,7 +86,6 @@ export default function RecipeCard({ recipe }) {
                 ))}
             </div>
 
-            {/* Ajout temporaire pour le design, on pourra ajouter un champ "time" et "difficulty" plus tard */}
             <div className="absolute top-4 left-4 flex items-center gap-2 text-[10px] text-gray-500 font-medium bg-white/80 dark:bg-gray-900/80 px-2 py-1 rounded-md backdrop-blur shadow-sm">
                 {recipe.prepTime && <span>⏱️ {recipe.prepTime}</span>}
                 {recipe.difficulty && <span>🍳 {recipe.difficulty}</span>}

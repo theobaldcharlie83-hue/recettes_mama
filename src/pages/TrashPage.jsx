@@ -1,16 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import { Trash2, RotateCcw, ArrowLeft, Utensils, Search, XCircle } from 'lucide-react';
+import ConfirmModal from '../components/ConfirmModal';
 
 export default function TrashPage() {
     const { trashedRecipes, restoreFromTrash, emptyTrash } = useContext(AppContext);
     const navigate = useNavigate();
+    const [confirmOpen, setConfirmOpen] = useState(false);
 
     const handleEmptyTrash = () => {
-        if (window.confirm("Vider la corbeille ? Les recettes personnelles seront supprimées définitivement.")) {
-            emptyTrash();
-        }
+        emptyTrash();
+        setConfirmOpen(false);
     };
 
     return (
@@ -29,12 +30,22 @@ export default function TrashPage() {
                 </div>
                 {trashedRecipes.length > 0 && (
                     <button
-                        onClick={handleEmptyTrash}
+                        onClick={() => setConfirmOpen(true)}
                         className="text-xs font-bold text-red-600 hover:text-red-700 dark:text-red-400 flex items-center gap-1 bg-red-50 dark:bg-red-900/20 px-3 py-2 rounded-xl border border-red-100 dark:border-red-900/30 transition-all active:scale-95"
                     >
                         Vider la corbeille
                     </button>
                 )}
+
+                <ConfirmModal
+                    open={confirmOpen}
+                    title="Vider la corbeille ?"
+                    message="Les recettes personnelles présentes dans la corbeille seront supprimées définitivement."
+                    confirmLabel="Vider"
+                    variant="danger"
+                    onConfirm={handleEmptyTrash}
+                    onCancel={() => setConfirmOpen(false)}
+                />
             </div>
 
             {trashedRecipes.length === 0 ? (
@@ -67,6 +78,7 @@ export default function TrashPage() {
                                 onClick={() => restoreFromTrash(recipe.id)}
                                 className="p-3 bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded-full hover:bg-orange-100 dark:hover:bg-orange-900/40 transition-all active:scale-90"
                                 title="Restaurer"
+                                aria-label={`Restaurer la recette ${recipe.title}`}
                             >
                                 <RotateCcw size={20} />
                             </button>

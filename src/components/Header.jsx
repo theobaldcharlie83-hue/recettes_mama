@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ChefHat, ArrowLeft, Sun, Moon, Trash2 } from 'lucide-react';
+import { ChefHat, ArrowLeft, Sun, Moon, Trash2, Settings } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 
@@ -31,11 +31,20 @@ export default function Header() {
                 )}
 
                 <div className="flex items-center gap-2">
+                    {/* Settings Button */}
+                    <button
+                        onClick={() => navigate('/settings')}
+                        className="p-2 rounded-full bg-orange-50 dark:bg-gray-800 text-orange-600 dark:text-orange-400 active:scale-95 transition-all"
+                        aria-label="Réglages"
+                    >
+                        <Settings size={20} />
+                    </button>
+
                     {/* Trash Button */}
                     <button
                         onClick={() => navigate('/trash')}
                         className="p-2 rounded-full bg-orange-50 dark:bg-gray-800 text-orange-600 dark:text-orange-400 active:scale-95 transition-all"
-                        aria-label="View Trash"
+                        aria-label="Voir la corbeille"
                     >
                         <Trash2 size={20} />
                     </button>
@@ -44,7 +53,7 @@ export default function Header() {
                     <button
                         onClick={toggleTheme}
                         className="p-2 rounded-full bg-orange-50 dark:bg-gray-800 text-orange-600 dark:text-orange-400 active:scale-95 transition-all"
-                        aria-label="Toggle Dark Mode"
+                        aria-label={theme === 'dark' ? 'Activer le mode clair' : 'Activer le mode sombre'}
                     >
                         {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
                     </button>

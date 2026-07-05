@@ -1,6 +1,6 @@
 import React, { useContext, useState, useMemo } from 'react';
 import { AppContext } from '../context/AppContext';
-import { Search, XCircle, BookOpen, Utensils, Carrot, Drumstick, Cookie, Coffee, Droplet, Martini, ChefHat, ArrowLeft } from 'lucide-react';
+import { Search, XCircle, BookOpen, Utensils, Carrot, Drumstick, Cookie, Coffee, Droplet, Martini, ChefHat, ArrowLeft, AlertTriangle } from 'lucide-react';
 import RecipeCard from '../components/RecipeCard';
 
 const CHAPTERS = [
@@ -30,14 +30,17 @@ const normalizeString = (str) => {
 };
 
 export default function HomePage() {
-    const { recipes, loading } = useContext(AppContext);
+    const { recipes, loading, fetchError } = useContext(AppContext);
     const [searchTerm, setSearchTerm] = useState("");
     const [activeChapter, setActiveChapter] = useState("Tous");
 
     const filteredRecipes = useMemo(() => {
         const normalizedSearch = normalizeString(searchTerm);
         return recipes.filter(r => {
-            const matchesSearch = normalizeString(r.title).includes(normalizedSearch);
+            const matchesSearch = !normalizedSearch ||
+                normalizeString(r.title).includes(normalizedSearch) ||
+                normalizeString(r.ingredients).includes(normalizedSearch) ||
+                (r.tags || []).some(tag => normalizeString(tag).includes(normalizedSearch));
             const matchesChapter = activeChapter === "Tous" || r.chapter === activeChapter;
             return matchesSearch && matchesChapter;
         });
@@ -48,6 +51,26 @@ export default function HomePage() {
             <div className="flex flex-col items-center justify-center mt-32 text-orange-800 dark:text-orange-200">
                 <Utensils className="animate-spin mb-4" size={48} />
                 <p className="font-serif italic text-gray-500 dark:text-gray-400">Mise en place de la cuisine...</p>
+            </div>
+        );
+    }
+
+    if (fetchError) {
+        return (
+            <div className="flex flex-col items-center justify-center mt-24 text-center px-6">
+                <div className="w-16 h-16 bg-red-50 dark:bg-red-900/20 rounded-full flex items-center justify-center mb-4">
+                    <AlertTriangle className="text-red-500" size={32} />
+                </div>
+                <p className="font-serif text-lg font-bold text-gray-800 dark:text-gray-100 mb-2">Impossible de charger les recettes</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm max-w-[280px] mb-6">
+                    Une erreur est survenue lors du chargement du livre de recettes. Vérifie ta connexion puis réessaie.
+                </p>
+                <button
+                    onClick={() => window.location.reload()}
+                    className="px-5 py-2 bg-orange-600 text-white rounded-full text-sm font-bold hover:bg-orange-700 active:scale-95 transition-all shadow-sm"
+                >
+                    Réessayer
+                </button>
             </div>
         );
     }

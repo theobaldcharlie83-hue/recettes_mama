@@ -10,12 +10,13 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['vite.svg', 'pwa-192x192.png', 'pwa-512x512.png', 'logo_transparent.png', 'data/recipes.json'],
       manifest: {
-        name: 'Recettes de Mama',
+        name: 'Les recettes de Mama MATTIO',
         short_name: 'Recettes Mama',
-        description: 'Le livre de recettes de la famille Mattio',
-        theme_color: '#6B1E3C',
-        background_color: '#F5F0E8',
+        description: 'Le livre de recettes de la famille Mattio, transcrit des cahiers manuscrits de Mama.',
+        theme_color: '#EA580C',
+        background_color: '#fdfbf7',
         display: 'standalone',
+        lang: 'fr',
         icons: [
           {
             src: 'pwa-192x192.png',

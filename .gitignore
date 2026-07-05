@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Photos brutes du cahier de recettes manuscrit (source, non versionnee)
+Images/
+
+# Config locale Claude Code (permissions specifiques a la machine)
+.claude/settings.local.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
